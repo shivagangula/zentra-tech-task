@@ -60,7 +60,7 @@ class RecivedRequestUsers(ListAPIView):
     def get_queryset(self):
         return ChatInterestUser.objects.filter(
             raised_user=self.request.user.id,
-            status=0
+            status__in=[0,3]
         )
 
 class RaiseChatRequestAPIView(APIView):
