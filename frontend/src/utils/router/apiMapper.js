@@ -12,9 +12,11 @@ const api_routes = {
 
 
     PUBLIC_LOBBY:  `${BASE_BACKEND_URL}/api/v1/available-users/`,
-    CHAT_USERS:  `${BASE_BACKEND_URL}/api/v1/intrested-users/`,
     REQUESTS:  `${BASE_BACKEND_URL}/api/v1/recived-requests-users/`,
     RAISE_REQUESTS:  `${BASE_BACKEND_URL}/api/v1/raise-request/`,
+    UPDATE_REQUEST:  `${BASE_BACKEND_URL}/api/v1/update-request-status/`,
+    CHAT_USERS:  `${BASE_BACKEND_URL}/api/v1/intrested-users/`
+
 
   };
 

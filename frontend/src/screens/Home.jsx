@@ -1,4 +1,4 @@
-import { Row, Col, Typography, Segmented } from "antd";
+import { Row, Col, Typography, Segmented, Empty } from "antd";
 import Chats from "../components/Chats";
 import PubLobby from "../components/PubLobby";
 import IntReq from "../components/IntReq";
@@ -25,7 +25,9 @@ export default function Home() {
               ChatMe
             </b>
           </Typography.Title>
+          
         </Col>
+
       </Row>
       <Row justify={"center"}>
         <Col md={20}>
@@ -51,17 +53,17 @@ export default function Home() {
 
         </Col>
         <Col md={16}>
-        <div style={{borderLeft:'0.1px solid lightgray',width:'100%', height:'100%', padding:'10px'}}>
-dhbsdjhb
-<br />
-dhbsdjhb
-<br />dhbsdjhb
-<br />dhbsdjhb
-<br />dhbsdjhb
-<br />dhbsdjhb
-<br />dhbsdjhb
-<br />
-        </div>
+        <div style={{
+  borderLeft: '0.1px solid lightgray',
+  width: '100%',
+  height: '100%',
+  padding: '10px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}}>
+  <Empty />
+</div>
         </Col>
      </Row>
 
