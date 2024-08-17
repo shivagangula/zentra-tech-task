@@ -73,15 +73,18 @@ class RaiseChatRequestAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
+        opt_user=request.data.get('opt_user')
+        message=request.data.get('message')
+        
         try:
             # Check if a request already exists for the current user
-            ChatInterestUser.objects.get(raised_user_id=request.user.id)
+            ChatInterestUser.objects.get(raised_user_id=request.user.id, opt_user_id=opt_user)
             return Response({"detail": "Request already raised."}, status=status.HTTP_400_BAD_REQUEST)
         except ChatInterestUser.DoesNotExist:
             # If no request exists, proceed to create a new one
-            opt_user=request.data.get('opt_user')
-            ChatInterestUser.objects.get_or_create(raised_user_id=request.user.id,opt_user=opt_user, status=3)
-            ChatInterestUser.objects.get_or_create(opt_user=request.user.id,raised_user_id=opt_user, status=0)
+            
+            ChatInterestUser.objects.get_or_create(raised_user_id=request.user.id,opt_user_id=opt_user,message=message, status=3)
+            ChatInterestUser.objects.get_or_create(opt_user_id=request.user.id,raised_user_id=opt_user,message=message, status=0)
             return Response({"message":"ok"}, status=status.HTTP_201_CREATED)
           
 

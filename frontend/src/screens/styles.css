@@ -1,3 +1,18 @@
 body{
     margin: 0 !important;
+    background: ghostwhite;
+}
+
+.ant-segmented-item{
+    width: 33% !important;
+}
+
+.cm-btn-primary{
+    background-color: #450391 !important;
+    color: white !important;
+}
+
+.cm-btn:hover{
+    color:#450391 !important;
+    border:1px solid #450391 !important;
 }

@@ -42,8 +42,8 @@ export default function Signin() {
             try {
                 const res = await axios.post(api_routes.LOGIN_API, formData);
 
-                setAccessToken(res.data.access_token);
-                setRefreshToken(res.data.refresh_token);
+                setAccessToken(res.data.access);
+                setRefreshToken(res.data.refresh);
 
                 messageApi.open({
                     type: "success",

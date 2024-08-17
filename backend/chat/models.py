@@ -12,6 +12,7 @@ class ChatInterestUser(models.Model):
     raised_user = models.ForeignKey(User, related_name="int_raised_user", on_delete=models.CASCADE)
     opt_user = models.ForeignKey(User, related_name="int_opt_user", on_delete=models.CASCADE)
     status = models.IntegerField(choices=STATUS_CHOICES)
+    message = models.CharField(max_length=500, null=True,blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
