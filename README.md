@@ -53,7 +53,7 @@ source env/bin/activate
 #install dependencys
 pip3 install -r requirements.txt 
 
-#start backend server
+#start frontend server
 python3 manage.py runserver  
 ```
 
