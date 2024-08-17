@@ -50,23 +50,6 @@ class InterestedUsers(ListAPIView):
             id__in=chat_intrested_users
         )
 
-
-# class RecivedRequestUsers(ListAPIView):
-#     """
-#     API view to list all users ordered by joined date.
-#     """
-#     serializer_class = UserSerializer
-#     permission_classes = [IsAuthenticated]
-
-#     def get_queryset(self):
-#         return User.objects.filter(
-#             is_staff=False,
-#             id__in=ChatInterestUser.objects.filter(
-#                 raised_user=self.request.user.id,
-#                 status=0
-#             ).values('opt_user')
-#         )
-
 class RecivedRequestUsers(ListAPIView):
     """
     API view to list all ChatInterestUser objects with User fields.
