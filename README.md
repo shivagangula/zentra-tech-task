@@ -39,10 +39,10 @@ This project is divided into three main features: user onboarding, interest acce
 git clone https://github.com/shivagangula/zentra-tech-task.git
 cd zentra-tech-task
 ```
-### For backend Setup
+### For backend Setup 
 
 ```bash
-cd zentra-tech-task
+cd backend
 
 #create virtual env
 python3 -m venv env 
